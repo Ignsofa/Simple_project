@@ -1,7 +1,6 @@
 import { config } from './config.js';
 
 // базові функції
-
 export function add(a: number, b: number): number {
   return a + b;
 }
@@ -9,7 +8,8 @@ export function add(a: number, b: number): number {
 export function capitalize(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
-// складний тип і форматер (дефолт з APP_PRECISION)
+
+// складний тип і форматер
 export type NumberFormatOptions = {
   precision?: number;
   locale?: string;
@@ -20,8 +20,7 @@ export function formatNumber(value: number, options?: NumberFormatOptions): stri
   return value.toFixed(precision);
 }
 
-// НОВЕ: клас Logger з літеральним типом рівня логування
-
+// клас Logger
 export type LogLevel = 'silent' | 'info' | 'debug';
 export class Logger {
   constructor(private level: LogLevel) {}
@@ -38,3 +37,6 @@ export class Logger {
     }
   }
 }
+
+// Публічний реекспорт config
+export { config };
