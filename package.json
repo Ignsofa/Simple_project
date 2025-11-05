@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "author": "ignsofa",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
